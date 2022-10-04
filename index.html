@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "player-info">
+        <button id="playerbutton">Role</button>
+        <span id="playername"></span>
+        <span id="tier"></span>
+        <span id="position"></span>
+        <span id="champion"></span>
+        <span id="intro"></span>
+    </div>
+    <div class = "scout">
+        <select id="team-number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <input type="number" step="5" min="0">
+        <button>Send</button>
+        <button id="burialButton">유찰</button>
+    </div>
+    <div class="team">
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+        <ul></ul>
+    </div>
+    <script src="js/lottery.js"></script>
+    <script src="js/burial.js"></script>
+    <script src="js/point.js"></script>
+    <script src="js/scout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+</body>
+</html>
