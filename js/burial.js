@@ -9,11 +9,11 @@ function sendToBurialList(){
     }
     else{
         const player = {
-        Name: '',
-        Tier: '',
-        Positon: '',
-        Champion: '',
-        Intro: '',
+            Name: '',
+            Tier: '',
+            Positon: '',
+            Champion: '',
+            Intro: '',
         }
         player.Name = playerName.innerText;
         player.Tier = tier.innerText;
