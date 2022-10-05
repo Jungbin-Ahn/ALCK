@@ -46,4 +46,12 @@ function randomNumberGenerator(){
     }
 }
 
+function resetPlayerSlot(){
+    playerName.innerText = '';
+    tier.innerText = '';
+    position.innerText = '';
+    champion.innerText = '';
+    intro.innerText = '';
+}
+
 playerButton.addEventListener("click", randomNumberGenerator);

@@ -21,11 +21,7 @@ function sendToBurialList(){
         player.Champion = champion.innerText;
         player.Intro = intro.innerText;
         burials.push(player);
-        playerName.innerText = '';
-        tier.innerText = '';
-        position.innerText = '';
-        champion.innerText = '';
-        intro.innerText = '';
+        resetPlayerSlot();
     }
 }
 
