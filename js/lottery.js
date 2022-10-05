@@ -31,7 +31,7 @@ const intro = document.querySelector("#intro");
 
 function randomNumberGenerator() {
   if (players.length === 0) {
-    alert("본 추첨 끝! 유찰경매 진행해주세요!");
+    alert("본 추첨 끝!!");
   } else {
     const arr = Math.floor(Math.random() * players.length);
     const chosenPlayer = players[arr];
