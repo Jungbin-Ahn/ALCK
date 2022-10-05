@@ -8,13 +8,7 @@ function sendToBurialList(){
         alert("플레이어를 추첨해주세요!");
     }
     else{
-        const player = {
-            Name: '',
-            Tier: '',
-            Positon: '',
-            Champion: '',
-            Intro: '',
-        }
+        const player = {};
         player.Name = playerName.innerText;
         player.Tier = tier.innerText;
         player.Position = position.innerText;
