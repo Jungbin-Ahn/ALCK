@@ -1,27 +1,3 @@
-players = [
-  {
-    Name: "안정빈",
-    Tier: "Gold",
-    Positon: "Top",
-    Champion: "Leona, Akali",
-    Intro: "잔인한 포식자",
-  },
-  {
-    Name: "김광현",
-    Tier: "Silver",
-    Positon: "Jungle",
-    Champion: "Fizz",
-    Intro: "어때",
-  },
-  {
-    Name: "최정",
-    Tier: "Platimum",
-    Positon: "Mind",
-    Champion: "Sivir, Oriana",
-    Intro: "OOOOOOOO",
-  },
-];
-
 const playerButton = document.querySelector("#playerbutton");
 const playerName = document.querySelector("#playername");
 const tier = document.querySelector("#tier");
