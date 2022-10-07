@@ -57,11 +57,13 @@
             </div>
         </div>
         <div id="center">
-            <h1>ALCK Title</h1>
-            <header>
-                <input type="file" onchange="readExcel()">
-                <a href="양식.xlsx" download="proposed_file_name"><button type="button">양식 Download</button></a>
-            </header>
+            <div>
+                <h1>ALCK Title</h1>
+                <header>
+                    <input type="file" onchange="readExcel()">
+                    <a href="양식.xlsx" download="proposed_file_name"><button type="button">양식 Download</button></a>
+                </header>
+            </div>
             <div class="player-info">
                 <button id="playerbutton">추첨</button>
                 <span id="playername"></span>
@@ -83,11 +85,16 @@
                     <input type="number" step="5" min="0">
                     <button>Send</button>
                 </form>
+            </div>
+            <div>
                 <button id="burialButton">유찰</button>
                 <button id="burial-to-players">유찰경매 시작!</button>
             </div>
         </div>
-        <div id="player-list"></div>
+        <div id="right">
+            <div id="player-list"></div>
+            <div id="burial-list"></div>
+        </div>
     </div>
     <script src="js/lottery.js"></script>
     <script src="js/burial.js"></script>
