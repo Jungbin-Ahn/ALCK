@@ -10,62 +10,106 @@ video {
   left: 0px;
 }
 .main {
-  display: flex;
-  position: fixed;
+  display: grid;
   width: 100vw;
-  border: 1px solid gold;
-  flex-direction: column;
-  justify-content: center;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#team-table {
+  font-size: 24px;
+  width: 33vw;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 8fr;
   align-items: center;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  grid-column: 1/3;
+}
+#point,
+#team {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(6, 100px);
+  gap: 10px;
+}
+#point-status {
+  display: grid;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  padding: 0px 10px;
+  grid-template-rows: repeat(2, 1fr);
+  color: white;
+}
+#point-status:nth-child(1) {
+  background-color: #d96bce;
+}
+#point-status:nth-child(2) {
+  background-color: #2196e9;
+}
+#point-status:nth-child(3) {
+  background-color: #e6433d;
+}
+#point-status:nth-child(4) {
+  background-color: #8cc8ed;
+}
+#point-status:nth-child(5) {
+  background-color: #ff8f0a;
+}
+#point-status:nth-child(6) {
+  background-color: #307545;
+}
+#point-status span {
+  display: flex;
+  justify-content: center;
+}
+#point-status span:first-child {
+  align-items: end;
+}
+#team ul {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  align-items: center;
+  width: 33vw;
+}
+
+h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
 }
 header {
   display: flex;
-  margin: 50px;
+  margin-bottom: 50px;
   gap: 50px;
-  width: 80vw;
   justify-content: end;
 }
 .player-info {
-  width: 100px;
-  height: 200px;
+  width: 30%;
+  height: 20%;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  align-items: center;
+  border: 3px solid gold;
 }
 .player-info button {
-  margin-right: 40px;
   width: 100px;
 }
 #scout {
   display: flex;
   margin: 30px 0px;
-  width: 1000px;
   justify-content: space-around;
 }
-#team-table {
-  height: 300px;
-  width: 80vw;
-  background-color: grey;
-}
-#point,
-#team {
-  grid-template-columns: repeat(6, 1fr);
-  display: grid;
-  justify-content: center;
-}
-#point {
-  border-bottom: 4px double black;
-}
-#point-status {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-}
-#team ul {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  justify-content: center;
-  list-style: none;
-  padding: 0px;
-}
-

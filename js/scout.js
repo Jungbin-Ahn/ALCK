@@ -54,7 +54,7 @@ function paintRemainingPoint() {
     const pointDiv = point.querySelector(`div:nth-child(${i})`);
     const pointFirstSpan = pointDiv.querySelector("div :first-child");
     const pointSecondSpan = pointDiv.querySelector("div :last-child");
-    pointFirstSpan.innerText = `Team ${i}:`;
+    pointFirstSpan.innerText = `Team ${i}`;
     pointSecondSpan.innerText = `${teamPoints[i - 1]}`;
   }
 }

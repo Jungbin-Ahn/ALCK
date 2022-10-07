@@ -14,36 +14,8 @@
         <source src="ionia.mp4" type="video/mp4">
     </video>
     <div class="main">
-        <h1>ALCK Title</h1>
-        <header>
-            <input type="file" onchange="readExcel()">
-            <a href="양식.xlsx" download="proposed_file_name"><button type="button">양식 Download</button></a>
-        </header>
-        <div class="player-info">
-            <button id="playerbutton">추첨</button>
-            <span id="playername"></span>
-            <span id="tier"></span>
-            <span id="position"></span>
-            <span id="champion"></span>
-            <span id="intro"></span>
-        </div>
-        <div id="scout">
-            <select id="team-number">
-                <option value="TEAM1">TEAM 1</option>
-                <option value="TEAM2">TEAM 2</option>
-                <option value="TEAM3">TEAM 3</option>
-                <option value="TEAM4">TEAM 4</option>
-                <option value="TEAM5">TEAM 5</option>
-                <option value="TEAM6">TEAM 6</option>
-            </select>
-            <form id="scout-form">
-                <input type="number" step="5" min="0">
-                <button>Send</button>
-            </form>
-            <button id="burialButton">유찰</button>
-            <button id="burial-to-players">유찰경매 시작!</button>
-        </div>
         <div id="team-table">
+            <h2>Team Status</h2>
             <div id="point">
                 <div id="point-status">
                     <span></span>
@@ -71,7 +43,12 @@
                 </div>
             </div>
             <div id="team">
-                <ul></ul>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
                 <ul></ul>
                 <ul></ul>
                 <ul></ul>
@@ -79,6 +56,38 @@
                 <ul></ul>
             </div>
         </div>
+        <div id="center">
+            <h1>ALCK Title</h1>
+            <header>
+                <input type="file" onchange="readExcel()">
+                <a href="양식.xlsx" download="proposed_file_name"><button type="button">양식 Download</button></a>
+            </header>
+            <div class="player-info">
+                <button id="playerbutton">추첨</button>
+                <span id="playername"></span>
+                <span id="tier"></span>
+                <span id="position"></span>
+                <span id="champion"></span>
+                <span id="intro"></span>
+            </div>
+            <div id="scout">
+                <select id="team-number">
+                    <option value="TEAM1">TEAM 1</option>
+                    <option value="TEAM2">TEAM 2</option>
+                    <option value="TEAM3">TEAM 3</option>
+                    <option value="TEAM4">TEAM 4</option>
+                    <option value="TEAM5">TEAM 5</option>
+                    <option value="TEAM6">TEAM 6</option>
+                </select>
+                <form id="scout-form">
+                    <input type="number" step="5" min="0">
+                    <button>Send</button>
+                </form>
+                <button id="burialButton">유찰</button>
+                <button id="burial-to-players">유찰경매 시작!</button>
+            </div>
+        </div>
+        <div id="player-list"></div>
     </div>
     <script src="js/lottery.js"></script>
     <script src="js/burial.js"></script>
