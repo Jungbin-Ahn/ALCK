@@ -14,7 +14,6 @@ const teamNumber6 = document.querySelector("#team :nth-child(6)");
 function assignPlayer(info) {
   info.preventDefault();
   if (playerName.innerText === "") {
-    console.log("no player name");
     alert("먼저 선수 추첨 부탁해요!");
   } else {
     console.log("here's player name");
@@ -55,7 +54,7 @@ function paintRemainingPoint() {
     const pointDiv = point.querySelector(`div:nth-child(${i})`);
     const pointFirstSpan = pointDiv.querySelector("div :first-child");
     const pointSecondSpan = pointDiv.querySelector("div :last-child");
-    pointFirstSpan.innerText = `Team ${i}`;
+    pointFirstSpan.innerText = `Team ${i}:`;
     pointSecondSpan.innerText = `${teamPoints[i - 1]}`;
   }
 }
