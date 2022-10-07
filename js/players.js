@@ -1,3 +1,4 @@
+const playerList = document.querySelector("#player-list")
 players = [];
 
 function readExcel() {
@@ -14,4 +15,15 @@ function readExcel() {
     });
   };
   reader.readAsBinaryString(input.files[0]);
+}
+
+function paintPlayers(){
+  for (let i = 0; i < players.length; i++) {
+    const span = document.createElement("span");
+    span.innerText = players[i].Name;
+    playerList.appendChild(span);
+  }
+}
+function deleteSpan(htmlTxt){
+  
 }
