@@ -15,17 +15,20 @@ video {
   height: 100vh;
   grid-template-columns: repeat(3, 1fr);
 }
-
-#team-table {
-  font-size: 24px;
+#team-table,
+#center,
+#right {
   width: 33vw;
   height: 90vh;
   margin-top: 5vh;
+  border-right: 5px double grey;
+  align-items: center;
+}
+#team-table {
+  font-size: 24px;
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 8fr;
-  align-items: center;
-  border-right: 5px double grey;
 }
 h2 {
   display: flex;
@@ -39,7 +42,7 @@ h2 {
   grid-template-rows: repeat(6, 100px);
   gap: 10px;
 }
-#point{
+#point {
   justify-content: end;
 }
 #point-status {
@@ -88,12 +91,7 @@ h2 {
 #center {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  width: 33vw;
-  height: 90vh;
-  margin-top: 5vh;
-  border-right: 5px double grey;
 }
 h1 {
   display: flex;
@@ -123,14 +121,14 @@ header {
   margin: 5px 0px;
   justify-content: center;
 }
-#scout select{
+#scout select {
   background-color: yellow;
 }
-#scout-form input{
+#scout-form input {
   background-color: green;
 }
 
-
-#right{
-
+#right {
+  background-color: white;
+  opacity: 0.5;
 }
