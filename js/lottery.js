@@ -8,6 +8,7 @@ const intro = document.querySelector("#intro");
 function randomNumberGenerator() {
   if (players.length === 0) {
     alert("본 추첨 끝!!");
+    burialToPlayerButton.classList.remove("hidden")
   } else {
     const arr = Math.floor(Math.random() * players.length);
     const chosenPlayer = players[arr];
@@ -17,6 +18,7 @@ function randomNumberGenerator() {
     position.innerText = chosenPlayer.Position;
     champion.innerText = chosenPlayer.Champion;
     intro.innerText = chosenPlayer.Intro;
+    paintPlayers();
   }
 }
 
