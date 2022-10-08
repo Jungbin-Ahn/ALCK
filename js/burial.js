@@ -2,6 +2,7 @@ burials = [];
 
 const burialButton = document.querySelector("#burialButton");
 const burialToPlayerButton = document.querySelector("#burial-to-players");
+const burialList = document.querySelector("#burial-list");
 
 function sendToBurialList() {
   if (playerName.innerText === "") {
@@ -15,6 +16,7 @@ function sendToBurialList() {
     player.Intro = intro.innerText;
     burials.push(player);
     resetPlayerSlot();
+    paintBurialPlayers();
   }
 }
 function sendBurialToPlayer() {
@@ -23,8 +25,22 @@ function sendBurialToPlayer() {
   } else {
     players = burials;
     alert("유찰경매를 시작하겠습니다!");
+    burialList.innerText = '';
+    paintPlayers();
+    burialToPlayerButton.classList.remove("hidden")
   }
 }
+
+function paintBurialPlayers(){
+  burialList.innerText = "";
+  for (let i = 0; i < players.length; i++) {
+    const span = document.createElement("span");
+    span.innerText = burials[i].Name;
+    burialList.appendChild(span);
+  }
+}
+
+
 
 burialButton.addEventListener("click", sendToBurialList);
 burialToPlayerButton.addEventListener("click", sendBurialToPlayer);
