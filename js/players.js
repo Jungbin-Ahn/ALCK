@@ -1,4 +1,4 @@
-const playerList = document.querySelector("#player-list")
+const playerList = document.querySelector("#player-list");
 players = [];
 
 function readExcel() {
@@ -12,18 +12,18 @@ function readExcel() {
       let rows = XLSX.utils.sheet_to_json(workBook.Sheets[sheetName]);
       console.log(JSON.stringify(rows));
       players = rows;
+      paintPlayers();
     });
   };
   reader.readAsBinaryString(input.files[0]);
+  
 }
 
-function paintPlayers(){
+function paintPlayers() {
+  playerList.innerText = "";
   for (let i = 0; i < players.length; i++) {
     const span = document.createElement("span");
     span.innerText = players[i].Name;
     playerList.appendChild(span);
   }
-}
-function deleteSpan(htmlTxt){
-  
 }
