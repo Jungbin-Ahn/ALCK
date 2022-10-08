@@ -109,6 +109,8 @@ h2 {
   padding: 0;
   font-size: 30px;
   font-weight: 700;
+  color: lightgoldenrodyellow;
+  -webkit-text-stroke: 1px black;
 }
 
 #center {
@@ -200,7 +202,7 @@ header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 0 20px;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 700;
   color: lightgoldenrodyellow;
   -webkit-text-stroke: 1px black;
