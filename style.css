@@ -9,6 +9,9 @@ video {
   top: 0px;
   left: 0px;
 }
+.hidden{
+  display: none;
+}
 .main {
   display: grid;
   width: 100vw;
@@ -139,8 +142,10 @@ header {
   opacity: 0.5;
   display: grid;
   grid-template-rows: 3fr 1fr;
+  align-items: flex-start;
 }
 #player-list, #burial-list{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  padding: 100px 20px;
 }
