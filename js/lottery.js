@@ -5,19 +5,20 @@ const position = document.querySelector("#position");
 const champion = document.querySelector("#champion");
 const intro = document.querySelector("#intro");
 
+let chosenPlayer;
+
 function randomNumberGenerator() {
   if (players.length === 0) {
     alert("본 추첨 끝!!");
     burialToPlayerButton.classList.remove("hidden")
   } else {
     const arr = Math.floor(Math.random() * players.length);
-    const chosenPlayer = players[arr];
+    chosenPlayer = players[arr];
     players.splice(arr, 1);
-    playerName.innerText = chosenPlayer.Name;
-    tier.innerText = chosenPlayer.Tier;
-    position.innerText = chosenPlayer.Position;
-    champion.innerText = chosenPlayer.Champion;
-    intro.innerText = chosenPlayer.Intro;
+    playerName.innerText = `이름: ${chosenPlayer.Name}`;
+    tier.innerText = `티어: ${chosenPlayer.Tier}`;
+    position.innerText = `포지션: ${chosenPlayer.Position}`;
+    intro.innerText = `자기소개: ${chosenPlayer.Intro}`;
     paintPlayers();
   }
 }

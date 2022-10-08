@@ -9,8 +9,26 @@ video {
   top: 0px;
   left: 0px;
 }
-.hidden{
+.hidden {
   display: none;
+}
+button,
+#scout select,
+#scout input {
+  width: 200px;
+  font-size: medium;
+  border: 2px solid black;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  color: black;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid grey;
+  color: aliceblue;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
 .main {
   display: grid;
@@ -24,7 +42,6 @@ video {
   width: 33vw;
   height: 90vh;
   margin-top: 5vh;
-  border-right: 5px double grey;
   align-items: center;
 }
 #team-table {
@@ -110,41 +127,68 @@ h2 {
 }
 header {
   display: flex;
-  margin-bottom: 50px;
   gap: 50px;
   justify-content: end;
 }
 .player-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 3px solid gold;
-  width: 500px;
-  height: 300px;
+  width: 520px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid black;
 }
 .player-info button {
   width: 100px;
+  background-color: rgba(226, 235, 110, 0.5);
+  align-self: center;
+  margin: 10px 0 45px 0;
+}
+.player-info span {
+  font-size: 40px;
+  font-weight: 700;
 }
 #scout {
   display: flex;
   margin: 5px 0px;
   justify-content: center;
+  gap: 5px;
 }
 #scout select {
-  background-color: yellow;
+  text-align: center;
+  width: auto;
+  padding: 0 2px;
 }
 #scout-form input {
-  background-color: green;
+  width: auto;
+  text-align: center;
+}
+#scout-form input::placeholder {
+  color: black;
+  text-align: center;
+}
+#timer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+#timer span {
+  width: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid black;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 #right {
-  background-color: white;
-  opacity: 0.5;
   display: grid;
   grid-template-rows: 3fr 1fr;
   align-items: flex-start;
 }
-#player-list, #burial-list{
+#player-list,
+#burial-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 100px 20px;
