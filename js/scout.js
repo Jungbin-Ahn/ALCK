@@ -16,7 +16,6 @@ function assignPlayer(info) {
   if (playerName.innerText === "") {
     alert("먼저 선수 추첨 부탁해요!");
   } else {
-    console.log("here's player name");
     if (teamSelect.value === "TEAM1") {
       paintPlayer(teamNumber1);
       teamPoints[0] = teamPoints[0] - pointInput.value;
@@ -43,9 +42,8 @@ function assignPlayer(info) {
 }
 
 function paintPlayer(ul) {
-  const recruitedPlayer = playerName.innerText;
   const li = document.createElement("li");
-  li.innerText = recruitedPlayer;
+  li.innerText = chosenPlayer.Name;
   ul.appendChild(li);
 }
 

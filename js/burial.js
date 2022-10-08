@@ -11,6 +11,7 @@ function sendToBurialList() {
     burials.push(chosenPlayer);
     resetPlayerSlot();
     paintBurialPlayers();
+    
   }
 }
 function sendBurialToPlayer() {
@@ -27,7 +28,7 @@ function sendBurialToPlayer() {
 
 function paintBurialPlayers(){
   burialList.innerText = "";
-  for (let i = 0; i < players.length; i++) {
+  for (let i = 0; i < burials.length; i++) {
     const span = document.createElement("span");
     span.innerText = burials[i].Name;
     burialList.appendChild(span);
