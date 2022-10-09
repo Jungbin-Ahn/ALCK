@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Retrosans';
+  src: url('./resource/establish\ Retrosans.ttf'),
+  url('/resource/establish\ Retrosans\ OTF.otf');
+}
+
 body {
   margin: 0px;
   font-family: 'Orbitron', sans-serif;
@@ -24,9 +30,10 @@ button,
   font-size: medium;
   border: 2px solid black;
   background-color: rgba(255, 255, 255, 0.4);
-  font-weight: 700;
+  font-weight: 500;
   color: black;
   transition: all 0.3s ease;
+  font-family: 'Retrosans';
 }
 
 button:hover {
@@ -85,7 +92,7 @@ h2 {
   padding: 0px 10px;
   grid-template-rows: repeat(2, 1fr);
   color: aliceblue;
-  font-size: 25px;
+  font-size: 20px;
 
 }
 
@@ -130,7 +137,7 @@ h2 {
   padding: 0;
   font-size: 30px;
   font-weight: 700;
-  color: lightgoldenrodyellow;
+  color: honeydew;
   -webkit-text-stroke: 1px black;
 }
 
@@ -225,6 +232,7 @@ header {
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: flex-start;
+  font-family: 'Retrosans';
 }
 
 #right h2 {
@@ -232,6 +240,10 @@ header {
   font-size: 40px;
   margin-top: 50px;
 }
+#right div:first-child {
+  font-family: 'Orbitron', sans-serif;
+}
+
 
 #player-list,
 #burial-list {
@@ -239,7 +251,7 @@ header {
   grid-template-columns: repeat(5, 1fr);
   padding: 0 20px;
   font-size: 30px;
-  font-weight: 700;
-  color: lightgoldenrodyellow;
+  font-family: 'Retrosans';
+  color: honeydew;
   -webkit-text-stroke: 1px black;
 }
