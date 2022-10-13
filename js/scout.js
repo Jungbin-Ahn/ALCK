@@ -1,4 +1,4 @@
-const teamPoints = [1000, 1000, 1000, 1000, 1000, 1000];
+const teamPoints = [1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000];
 
 const scoutForm = document.querySelector("#scout-form");
 const pointInput = document.querySelector("#scout-form input");
@@ -10,6 +10,8 @@ const teamNumber3 = document.querySelector("#team :nth-child(3)");
 const teamNumber4 = document.querySelector("#team :nth-child(4)");
 const teamNumber5 = document.querySelector("#team :nth-child(5)");
 const teamNumber6 = document.querySelector("#team :nth-child(6)");
+const teamNumber7 = document.querySelector("#team :nth-child(7)");
+const teamNumber8 = document.querySelector("#team :nth-child(8)");
 
 function assignPlayer(info) {
   info.preventDefault();
@@ -31,9 +33,15 @@ function assignPlayer(info) {
     } else if (teamSelect.value === "TEAM5") {
       paintPlayer(teamNumber5);
       teamPoints[4] = teamPoints[4] - pointInput.value;
-    } else {
+    } else if (teamSelect.value === "TEAM6") {
       paintPlayer(teamNumber6);
       teamPoints[5] = teamPoints[5] - pointInput.value;
+    } else if (teamSelect.value === "TEAM7") {
+      paintPlayer(teamNumber7);
+      teamPoints[6] = teamPoints[6] - pointInput.value;
+    } else {
+      paintPlayer(teamNumber8);
+      teamPoints[7] = teamPoints[7] - pointInput.value;
     }
     resetPlayerSlot();
     pointInput.value = "";
