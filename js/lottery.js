@@ -1,5 +1,6 @@
 const playerButton = document.querySelector("#playerbutton");
 const playerName = document.querySelector("#playername");
+const playerId = document.querySelector("#playerid");
 const tier = document.querySelector("#tier");
 const position = document.querySelector("#position");
 const champion = document.querySelector("#champion");
@@ -16,6 +17,7 @@ function randomNumberGenerator() {
     chosenPlayer = players[arr];
     players.splice(arr, 1);
     playerName.innerText = `이름: ${chosenPlayer.Name}`;
+    playerId.innerText = `소환사명: ${chosenPlayer.ID}`;
     tier.innerText = `티어: ${chosenPlayer.Tier}`;
     position.innerText = `포지션: ${chosenPlayer.Position}`;
     intro.innerText = `자기소개: ${chosenPlayer.Intro}`;
@@ -25,6 +27,7 @@ function randomNumberGenerator() {
 
 function resetPlayerSlot() {
   playerName.innerText = "";
+  playerId.innerText = "";
   tier.innerText = "";
   position.innerText = "";
   champion.innerText = "";
