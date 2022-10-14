@@ -49,22 +49,17 @@ const sendMessage = () => {
   const point = document.getElementById("test").value;
   const chatter = document.getElementById("chatter").value;
 
-  //   messageDB.push({"message":point})
-  //   messageDB.on("child_added", snapshot => {
-  //     console.log("here")
-  //     displayMessage({"name":chatter,"message": point})
-  //   })
-  fs.collection("messages")
-    .doc(`${chatter}`)
-    .set({ point: point })
-    .then(() => {
-      console.log("Successfully written");
-    });
   point.value = "";
 };
 
-function displayMessage(e) {
-  const div = document.createElement("div");
-  div.textContent = e.name + " : " + e.message;
-  chat.appendChild(div);
-}
+// function displayMessage(e) {
+//   const div = document.createElement("div");
+//   div.textContent = e.name + " : " + e.message;
+//   chat.appendChild(div);
+// }
+fs.collection("messages")
+.doc(`${chatter}`)
+.set({ point: point })
+.then(() => {
+  console.log("Successfully written");
+});
