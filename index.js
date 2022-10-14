@@ -48,7 +48,7 @@ const login = () => {
 const sendMessage = () => {
   const point = document.getElementById("test").value;
   const chatter = document.getElementById("chatter").value;
-
+  console.log("Message Sent");
   point.value = "";
 };
 
@@ -58,8 +58,9 @@ const sendMessage = () => {
 //   chat.appendChild(div);
 // }
 fs.collection("messages")
-.doc(`${chatter}`)
-.set({ point: point })
-.then(() => {
-  console.log("Successfully written");
-});
+  .doc(`${chatter}`)
+  .set({ point: point })
+  .then(() => {
+    console.log("Successfully written");
+  });
+
