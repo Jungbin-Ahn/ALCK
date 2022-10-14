@@ -74,6 +74,13 @@ h2 {
 }
 #team-table h2{
   margin-bottom: 0px;
+  padding: 5px;
+  background-image: url("./resource/heading.png");
+  background-size: 500px 50px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color:aliceblue;
+  grid-column: 2/3;
 }
 #point,
 #team {
@@ -140,6 +147,7 @@ h2 {
   font-size: 40px;
   margin-top: 0px;
   margin-bottom: 50px;
+
 }
 
 header {
@@ -216,9 +224,16 @@ header {
 }
 
 #right h2 {
-  justify-content: center;
+  display: flex;
+  align-items: center;
   font-size: 40px;
-  margin-top: 50px;
+  margin-top: 25px;
+  padding: 5px;
+  background-image: url("./resource/heading.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color:aliceblue;
 }
 #right div:first-child {
   font-family: "Orbitron", sans-serif;
