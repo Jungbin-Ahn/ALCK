@@ -8,7 +8,7 @@ const firebaseApp = firebase.initializeApp({
     appId: "1:89179356630:web:12ac618cf29459633cb877",
   });
   
-  const db = firebaseApp.firestore();
+  const db = firebaseApp.database();
   const auth = firebaseApp.auth();
   const register = () => {
     const email = document.getElementById('email').value
