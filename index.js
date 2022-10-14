@@ -1,89 +1,70 @@
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyDwBA0U9iQqRtYwKNDv3j96zYOnQXnBpxg",
-    authDomain: "alck-f0c35.firebaseapp.com",
-    databaseURL: "https://alck-f0c35-default-rtdb.firebaseio.com",
-    projectId: "alck-f0c35",
-    storageBucket: "alck-f0c35.appspot.com",
-    messagingSenderId: "89179356630",
-    appId: "1:89179356630:web:12ac618cf29459633cb877",
-  });
-  
-  const db = firebaseApp.database();
-  const auth = firebaseApp.auth();
-  const register = () => {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
+  apiKey: "AIzaSyDwBA0U9iQqRtYwKNDv3j96zYOnQXnBpxg",
+  authDomain: "alck-f0c35.firebaseapp.com",
+  databaseURL: "https://alck-f0c35-default-rtdb.firebaseio.com",
+  projectId: "alck-f0c35",
+  storageBucket: "alck-f0c35.appspot.com",
+  messagingSenderId: "89179356630",
+  appId: "1:89179356630:web:12ac618cf29459633cb877",
+});
 
-    auth.createUserWithEmailAndPassword(email, password)
+const db = firebaseApp.database();
+const fs = firebaseApp.firestore();
+const auth = firebaseApp.auth();
+const chat = document.getElementById("chat");
+
+const register = () => {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth
+    .createUserWithEmailAndPassword(email, password)
     .then((res) => {
-        console.log(res.user)
+      console.log(res.user);
     })
     .catch((err) => {
-        alert(err.message)
-        console.log(err.code)
-        console.log(err.message)
-    })
-}
+      alert(err.message);
+      console.log(err.code);
+      console.log(err.message);
+    });
+};
 
 const login = () => {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-    auth.signInWithEmailAndPassword(email, password)
+  auth
+    .signInWithEmailAndPassword(email, password)
     .then((res) => {
-        console.log(res.user)
+      console.log(res.user);
     })
     .catch((err) => {
-        alert(err.message)
-        console.log(err.code)
-        console.log(err.message)
-    })
-}
-
-const saveData = () => {
-    const email = document.getElementById('email').value
-    const password = document.getElementById('password').value
-
-    db.collection('users')
-    .add({
-        email: email,
-        password: password
-    })
-    .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
-    })
-    .catch((error) => {
-        console.error("Error adding document: ", error);
+      alert(err.message);
+      console.log(err.code);
+      console.log(err.message);
     });
-}
+};
 
-const readData = () => {
-    db.collection('users')
-    .get()
-    .then((data) => {
-        console.log(data.docs.map((item) => {
-            return {...item.data(), id: item.id}
-        }))
-    })
-}
+const sendMessage = () => {
+  const point = document.getElementById("test").value;
+  const chatter = document.getElementById("chatter").value;
 
-const updateData = () => {
-    db.collection('users').doc('6caYOiNxwviOJFIQ4Uag')
-    .update({
-        email: 'ashishisagoodboy1234@gmail.com',
-        password: '123456'
-    })
+  //   messageDB.push({"message":point})
+  //   messageDB.on("child_added", snapshot => {
+  //     console.log("here")
+  //     displayMessage({"name":chatter,"message": point})
+  //   })
+  fs.collection("messages")
+    .doc(`${chatter}`)
+    .set({ point: point })
     .then(() => {
-        alert('Data Updated')
-    })
-}
+      console.log("Successfully written");
+    });
+  point.value = "";
+};
 
-const deleteData = () => {
-    db.collection('users').doc('6caYOiNxwviOJFIQ4Uag').delete()
-    .then(() => {
-        alert('Data Deleted')
-    })
-    .catch((err) =>{
-        console.log(err)
-    })
+function displayMessage(e) {
+  const div = document.createElement("div");
+  div.textContent = e.name + " : " + e.message;
+  chat.appendChild(div);
 }
